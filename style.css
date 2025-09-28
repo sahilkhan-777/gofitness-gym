@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Pixelify+Sans:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Pixelify+Sans:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sanchez:ital@0;1&family=VT323&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-clr: #ffffff;
+    --primary-accent: #3f2689;
+    --primary-accent-hover: #38227a;
+    --secondary-accent: #7755ff;
+    --secondary-accent-hover: #6c4cec;
+    --tertiary-accent: #6257e3;
+    --tertiary-accent-hover: #4e44b8;
+    --primary-font: "League Spartan", serif;
+    --secondary-font: "Sanchez", sans-serif;
+}
+
+body{
+    color: var(--primary-clr);
+    letter-spacing: 1.4;
+}
+
+.hero{
+    background-image: url("./images/gym-bg.webp");
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: overlay;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 2.5rem;
+    gap: 2.5rem;
+}
+
+
+header{
+    margin-top: 1rem;
+    font-family: var(--secondary-font);
+    text-transform: uppercase;
+    display: flex;
+}
+
+header ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    text-transform: none;
+}
+header a{
+    text-decoration: none;
+    color: var(--primary-clr);
+    position: relative;
+}
+header a::after{
+    content: "";
+    position: absolute;
+    height: 3px;
+    border-radius: 16px;
+    background-color: #fff;
+    left: 0;
+    top: 100%;
+}
+
+@keyframes slide {
+    from{
+        width: 0%;
+    }to{
+        width: 100%;
+    }
+}
+
+header ul li:hover a::after{
+    animation: slide 1s ease infinite;
+}
+
+.menu{
+    visibility: hidden;
+}
+.intro{
+    display: flex;
+    justify-content: center;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-shadow: 1px 1px 0px black;
+    max-width: max-content;
+}
+
+
+.main h1{
+    font-family: var(--primary-font);
+    font-weight: 800;
+    font-size: 2.8rem;
+}
+
+.main p{
+    font-family: var(--secondary-font);
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+.btn-container{
+    display: flex;
+    justify-content: center;
+}
+.btn-container .cta-button{
+    background-color: var(--primary-accent);
+    border: none;
+    border-radius: 12px;
+    color: var(--primary-clr);
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    font-family: var(--secondary-font);
+    cursor: pointer;
+}
+
+.btn-container .cta-button:hover{
+    background-color: var(--primary-accent-hover);
+}
+
+.info{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-family: var(--secondary-font);
+}
+.info-item p:first-child{
+    font-family: var(--primary-font);
+    font-weight: bold;
+}
+
+
+@media (min-width: 600px) {
+    .hero{
+        padding: 1rem 3.5rem;
+    }
+    header{
+        padding: 0;
+        font-size: 2.5rem;
+        justify-content: space-between;
+    }
+    header .menu{
+        visibility: visible;
+    }
+    .menu ul{
+        gap: 4.9rem;
+    }
+    .main h1{
+        font-size: 7.5rem;
+    }
+    .main p{
+        font-size: 1.5rem;
+        text-align: left;
+    }
+
+    .btn-container .cta-button{
+        padding: 1rem;
+        font-size: 1.5rem;
+    }
+    .info{
+        font-size: 2.5rem;
+    }
+
+}
+
