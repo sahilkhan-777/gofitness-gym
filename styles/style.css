@@ -21,7 +21,6 @@
 
 body {
     color: var(--primary-clr);
-    letter-spacing: 1.4;
 }
 
 .hero {
@@ -154,7 +153,7 @@ header ul li:hover a::after {
 
 
 /* About section */
-.about {
+#about {
     padding: 2.5rem;
 }
 
@@ -177,6 +176,7 @@ header ul li:hover a::after {
 }
 
 .about-container h3 {
+    font-weight: 400;
     font-size: 1.5rem;
     text-transform: uppercase;
 }
@@ -192,7 +192,7 @@ header ul li:hover a::after {
 }
 
 
-.programs-container {
+.section-container {
     color: var(--primary-accent);
     padding: 2.5rem;
     display: flex;
@@ -200,55 +200,89 @@ header ul li:hover a::after {
     gap: 0.5rem;
 }
 
-.programs-container h3 {
+.section-container h3 {
     font-size: 1.5rem;
+    font-weight: 400;
     font-family: var(--secondary-font);
     text-transform: uppercase;
     text-align: center;
 }
 
-.programs-container h2 {
+.section-container h2 {
     font-size: 2rem;
     font-family: var(--primary-font);
     text-align: center;
 }
 
-.programs-container .programs-card-container {
+.section-container .card-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 2.5rem;
 }
 
-.programs-container .programs-card-container .programs-card {
+.section-container .card-container .card {
     color: var(--primary-clr);
     background-color: var(--primary-accent);
     border-radius: 36px;
     max-width: fit-content;
 }
 
-.programs-container .programs-card-container .programs-card .programs-card-text {
+.section-container .card-container .card .card-text {
     padding: 1rem 1.5rem;
 }
 
-.programs-container .programs-card-container .programs-card .programs-card-text h4 {
+.section-container .card-container .card .card-text h4 {
     font-family: var(--primary-font);
     font-size: 1.5rem;
 }
 
-.programs-container .programs-card-container .programs-card .programs-card-text p {
+.section-container .card-container .card .card-text p {
     font-family: var(--secondary-font);
     margin: 1rem 0;
 }
 
-.programs-container .programs-card-container .programs-card .programs-card-text ul {
+.section-container .card-container .card .card-text ul {
     padding: 0.5rem 1.5rem;
     font-family: var(--secondary-font);
 }
 
-.programs-container .programs-card-container .programs-card .card-img-top {
+.section-container .card-container .card .card-img-top {
     max-width: 100%;
     border-radius: 36px 36px 0 0;
+}
+
+.section-container h2>span{
+    color: var(--secondary-accent);
+}
+.section-container .card-container .card .card-text h4.trainer-name{
+    font-size: 2rem;
+}
+
+.section-container .card-container .card .card-text .trainer-designation, .trainer-speciality{
+    color: var(--tertiary-accent);
+}
+
+
+.section-container .card-container .card .card-text .book-btn{
+    background-color: transparent;
+    border: 1px solid var(--secondary-accent);
+    padding: 0.5rem 1rem;
+    border-radius: 36px;
+    letter-spacing: 1.2px;
+    cursor: pointer;
+    width: 100%;
+    font-family: var(--secondary-font);
+    margin: 0.5rem 0;
+}
+
+.section-container .card-container .card .card-text .book-btn a{
+    color: var(--primary-clr);
+    text-decoration: none;
+}
+
+.section-container .card-container .card .card-text .book-btn:hover{
+    background-color: var(--secondary-accent-hover);
 }
 
 @media (min-width: 750px) {
@@ -269,7 +303,7 @@ header ul li:hover a::after {
         gap: 3.5rem;
     }
 
-    .about {
+    #about {
         padding: 3rem;
     }
 
@@ -294,6 +328,38 @@ header ul li:hover a::after {
 
     .about-container p {
         font-size: 1.8rem;
+    }
+
+
+    .section-container {
+        padding: 2.5rem;
+    }
+
+    .section-container h3 {
+        font-size: 2.5rem;
+    }
+
+    .section-container h2 {
+        font-size: 3.5rem;
+    }
+
+    .section-container .card-container {
+        flex-direction: row;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .section-container .card-container .card {
+        max-width: 400px;
+        width: 100%;
+    }
+
+    .section-container .card-container .card .card-text {
+        padding: 1rem 1.5rem;
+    }
+
+    .section-container .card-container .card .card-text h4 {
+        font-size: 1.5rem;
     }
 }
 
@@ -335,7 +401,7 @@ header ul li:hover a::after {
     }
 
     /* About section */
-    .about {
+    #about {
         padding: 3.5rem 3rem;
     }
 
@@ -353,7 +419,6 @@ header ul li:hover a::after {
 
     .about-container h3 {
         font-size: 2.5rem;
-        font-weight: 400;
     }
 
     .about-container h2 {
@@ -370,45 +435,50 @@ header ul li:hover a::after {
         max-width: 100%;
     }
 
-    /* programs section */
+    /* programs, trainer-details section */
 
-    .programs-container {
+    .section-container {
         padding: 3.5rem;
     }
 
-    .programs-container h3 {
+    .section-container h3 {
         font-size: 2.5rem;
+        font-weight: 400;
     }
 
-    .programs-container h2 {
+    .section-container h2 {
         font-size: 3.5rem;
     }
 
-    .programs-container .programs-card-container {
-        /* display: flex; */
+    .section-container .card-container {
         flex-direction: row;
         justify-content: center;
         gap: 2.5rem;
     }
 
-    .programs-container .programs-card-container .programs-card {
-        color: var(--primary-clr);
-        background-color: var(--primary-accent);
-        border-radius: 36px;
+    .section-container .card-container .card {
         max-width: 400px;
         width: 100%;
     }
 
-    .programs-container .programs-card-container .programs-card .programs-card-text {
+    .section-container .card-container .card .card-text {
         padding: 1.5rem 2rem;
     }
 
-    .programs-container .programs-card-container .programs-card .programs-card-text h4 {
+    .section-container .card-container .card .card-text h4 {
         font-size: 2rem;
     }
 
-    .programs-container .programs-card-container .programs-card .programs-card-text ul {
+    .section-container .card-container .card .card-text ul {
         padding: 0.5rem 2rem;
+    }
+
+    .section-container .card-container .card .card-text .trainer-designation {
+        font-size: 1.5rem;
+    }
+
+    .section-container .card-container .card .card-text .trainer-speciality {
+        font-size: 1.5rem;
     }
 
 }
@@ -430,4 +500,34 @@ header ul li:hover a::after {
     .about-container p {
         font-size: 2.5rem;
     }
+
+    .section-container .card-container .card {
+        max-width: 500px;
+        width: 100%;
+    }
+
+    .section-container .card-container .card .card-text h4 {
+        font-size: 2.5rem;
+    }
+    .section-container .card-container .card .card-text ul {
+        padding: 0.5rem 2.5rem;
+        font-size: 1.3rem;
+    }
+    .section-container .card-container .card .card-text p {
+        font-size: 1.3rem;
+    }
+    .section-container .card-container .card .card-text h4.trainer-name {
+        font-size: 2.5rem;
+    }
+    .section-container .card-container .card .card-text .trainer-designation {
+        font-size: 2rem;
+    }
+    .section-container .card-container .card .card-text .trainer-speciality {
+        font-size: 2rem;
+    }
+    .section-container .card-container .card .card-text .book-btn{
+        font-size: 1.3rem;
+        padding: 0.7rem 1rem;
+    }
+
 }
