@@ -285,6 +285,25 @@ header ul li:hover a::after {
     background-color: var(--secondary-accent-hover);
 }
 
+.section-container .card-container .card .card-text .book-btn:focus{
+    outline: none;
+}
+
+.section-container .card-container .card .card-text .trainer-skills{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.section-container .card-container .card .card-text .trainer-skills>li{
+    background-color: var(--secondary-accent);
+    margin: 0.2rem;
+    text-align: center;
+    max-width: max-content;
+    border-radius: 16px;
+    padding: 0.3rem 0.5rem;
+}
+
 @media (min-width: 750px) {
     .hero {
         padding: 1rem 2.5rem;
