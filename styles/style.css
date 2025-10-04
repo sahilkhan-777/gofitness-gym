@@ -79,7 +79,7 @@ header a::after {
 }
 
 header ul li:hover a::after {
-    animation: slide 1s ease infinite;
+    animation: slide 1s linear infinite;
 }
 
 .menu {
@@ -98,7 +98,6 @@ header ul li:hover a::after {
     text-shadow: 1px 1px 0px black;
     max-width: max-content;
 }
-
 
 .main h1 {
     font-family: var(--primary-font);
@@ -351,19 +350,19 @@ header ul li:hover a::after {
 }
 
 /* contact section */
-#contact {
+.contact {
     padding: 1.5rem;
 }
 
-#contact h2 {
+.contact h2 {
     color: var(--secondary-accent);
 }
 
-#contact h2>span {
+.contact h2>span {
     color: var(--primary-accent)
 }
 
-#contact .tagline {
+.contact .tagline {
     font-family: var(--secondary-font);
     text-align: center;
 }
@@ -442,9 +441,9 @@ header ul li:hover a::after {
 }
 
 .contact-container .contact-info .info-card-container {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
     gap: 1rem;
     font-family: var(--secondary-font);
 }
@@ -488,6 +487,132 @@ a {
 .section-container .contact-container .contact-info #googleMap iframe {
     width: 100%;
     height: 300px;
+}
+
+.site-footer{
+    background-color: var(--primary-accent);
+    font-family: var(--secondary-font);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.site-footer h3{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+.site-footer ul{
+    padding: 0.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 0.5rem;
+}
+
+.site-footer a,
+.site-footer li {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: var(--primary-clr);
+}
+.site-footer__container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.site-footer__main{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.site-footer__brand{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.site-footer__socials{
+    display: flex;
+    gap: 1rem;
+    cursor: pointer;
+}
+.site-footer__quick-links h3,
+.site-footer__programs h3,
+.site-footer__contact h3{
+    font-family: var(--primary-font);
+    font-weight: 700;
+}
+
+.site-footer__quick-links a:hover,
+.site-footer__socials a:hover{
+    opacity: 0.8;
+}
+
+
+.site-footer__socials img{
+    width: 2rem;
+    height: 2rem;
+    filter: invert(1);
+}
+
+.site-footer__contact-group img{
+    width: 1rem;
+    height: 1rem;
+    filter: invert(1);
+}
+.site-footer__contact-group a,
+.site-footer__contact-group p {
+    margin: 0.2rem 1.5rem;
+    opacity: 0.8;
+    font-size: 1rem;
+}
+
+
+.site-footer__contact-group a:hover{
+    opacity: 1;
+}
+
+.site-footer__bottom{
+    margin-top: 1.5rem;
+    border-top: 1px solid var(--secondary-accent);
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    opacity: 0.8;
+}
+.site-footer__bottom div{
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.site-footer__legal-links a{
+    font-size: 1rem;
+}
+.site-footer__legal-links a:hover{
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.back-to-top-btn{
+    position: absolute;
+    background-color: var(--tertiary-accent);
+    padding: 0.6rem 0.8rem;
+    border-radius: 50%;
+    bottom: 3.5rem;
+    right: 1rem;
+    opacity: 0.8;
+    cursor: pointer;
+}
+.back-to-top-btn img{
+    width: 1.5rem;
+    height: 1.5rem;
+    filter: invert(1);
 }
 
 @media (min-width: 750px) {
@@ -739,8 +864,8 @@ a {
         display: flex;
         flex-direction: row;
         width: 100%;
-        gap: 2rem;
-        padding: 1rem;
+        justify-content: space-between;
+        padding: 2rem;
     }
 
     .contact-container .contact-form {
@@ -780,7 +905,25 @@ a {
     }
 
     .contact-container .contact-info .info-card-container {
-        justify-content: center;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    .site-footer__main{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .site-footer__main div{
+        flex: 1;
+    }
+
+    .site-footer__bottom{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .site-footer__bottom div{
+        display: flex;
+        gap: 1rem;
     }
 }
 
