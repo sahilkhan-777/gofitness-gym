@@ -7,11 +7,17 @@ document.addEventListener("DOMContentLoaded", function () {
     })
 });
 
-function scrollToContact() {
-    const contactSection = document.getElementById("contact");
-    contactSection.scrollIntoView({ behavior: 'smooth' });
+function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    section.scrollIntoView({ behavior: 'smooth' });
 }
 
 const startJourneyBtn = document.querySelector(".cta-button");
+startJourneyBtn.addEventListener("click", function() {
+    scrollToSection("contact");
+});
 
-startJourneyBtn.addEventListener("click", scrollToContact);
+const backToTopBtn = document.querySelector(".back-to-top-btn");
+backToTopBtn.addEventListener("click", function() {
+    scrollToSection("home");
+});
