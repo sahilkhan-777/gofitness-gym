@@ -52,7 +52,7 @@
     </div>
 
     <!-- ABOUT section -->
-    <div id="about">
+    <div id="about" class="about">
         <div class="about-container">
             <div class="about-text">
                 <h3>About energyfit</h3>
@@ -68,7 +68,7 @@
     </div>
 
     <!-- Programs section -->
-    <div class="section-container" id="programs">
+    <div class="section-container programs" id="programs">
         <h3>Our programs<h3>
                 <h2>Choose Your Training Program</h2>
                 <div class="card-container">
@@ -116,7 +116,7 @@
     </div>
 
     <!-- Trainer Details Section -->
-    <div class="section-container">
+    <div class="section-container trainers" id="trainers">
         <h3>Meet our team<h3>
                 <h2>Expert Trainers<br><span>Ready to Guide You</span></h2>
                 <div class="card-container">
@@ -174,7 +174,7 @@
     </div>
 
     <!-- Pricing section -->
-    <div class="section-container" id="pricing">
+    <div class="section-container pricing" id="pricing">
         <h3 id="pricing-title">Membership plan</h3>
         <p id="pricing-tagline">Flexible pricing options designed to fit your budget goals. All plans include
             access to our world-class facilities.</p>
@@ -229,10 +229,11 @@
     </div>
 
     <!-- Contact section -->
-    <div class="section-container" id="contact">
+    <div class="section-container contact" id="contact">
         <h3>Get in touch</h3>
         <h2>Ready to Start<br><span>Your Journey?</span></h2>
-        <p class="tagline">Have questions about our programs? Want to schedule a tour? We're here to help you take the first step.</p>
+        <p class="tagline">Have questions about our programs? Want to schedule a tour? We're here to help you take the
+            first step.</p>
         <div class="contact-container">
             <form action="#" class="contact-form">
                 <h4>Send Us a Message</h4>
@@ -257,35 +258,51 @@
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                         <title>email</title>
                         <path
-                            d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z"/>
+                            d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z" />
                     </svg> Send Message
                 </button>
             </form>
             <div class="contact-info">
                 <div class="info-card-container">
                     <div class="info-card">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>map-marker-outline</title><path d="M12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5M12,2A7,7 0 0,1 19,9C19,14.25 12,22 12,22C12,22 5,14.25 5,9A7,7 0 0,1 12,2M12,4A5,5 0 0,0 7,9C7,10 7,12 12,18.71C17,12 17,10 17,9A5,5 0 0,0 12,4Z" /></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <title>map-marker-outline</title>
+                            <path
+                                d="M12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5M12,2A7,7 0 0,1 19,9C19,14.25 12,22 12,22C12,22 5,14.25 5,9A7,7 0 0,1 12,2M12,4A5,5 0 0,0 7,9C7,10 7,12 12,18.71C17,12 17,10 17,9A5,5 0 0,0 12,4Z" />
+                        </svg>
                         <h5>Visit Us</h5>
                         <p class="card-text">123 Fitness Street</p>
                         <p class="card-text">Downtown, ND 100001</p>
                         <a href="tel: 1234567890">Call Now</a>
                     </div>
                     <div class="info-card">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>phone-outline</title><path d="M20,15.5C18.8,15.5 17.5,15.3 16.4,14.9C16.3,14.9 16.2,14.9 16.1,14.9C15.8,14.9 15.6,15 15.4,15.2L13.2,17.4C10.4,15.9 8,13.6 6.6,10.8L8.8,8.6C9.1,8.3 9.2,7.9 9,7.6C8.7,6.5 8.5,5.2 8.5,4C8.5,3.5 8,3 7.5,3H4C3.5,3 3,3.5 3,4C3,13.4 10.6,21 20,21C20.5,21 21,20.5 21,20V16.5C21,16 20.5,15.5 20,15.5M5,5H6.5C6.6,5.9 6.8,6.8 7,7.6L5.8,8.8C5.4,7.6 5.1,6.3 5,5M19,19C17.7,18.9 16.4,18.6 15.2,18.2L16.4,17C17.2,17.2 18.1,17.4 19,17.4V19Z" /></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <title>phone-outline</title>
+                            <path
+                                d="M20,15.5C18.8,15.5 17.5,15.3 16.4,14.9C16.3,14.9 16.2,14.9 16.1,14.9C15.8,14.9 15.6,15 15.4,15.2L13.2,17.4C10.4,15.9 8,13.6 6.6,10.8L8.8,8.6C9.1,8.3 9.2,7.9 9,7.6C8.7,6.5 8.5,5.2 8.5,4C8.5,3.5 8,3 7.5,3H4C3.5,3 3,3.5 3,4C3,13.4 10.6,21 20,21C20.5,21 21,20.5 21,20V16.5C21,16 20.5,15.5 20,15.5M5,5H6.5C6.6,5.9 6.8,6.8 7,7.6L5.8,8.8C5.4,7.6 5.1,6.3 5,5M19,19C17.7,18.9 16.4,18.6 15.2,18.2L16.4,17C17.2,17.2 18.1,17.4 19,17.4V19Z" />
+                        </svg>
                         <h5>Call Us</h5>
                         <p class="card-text">+91 1234567890</p>
                         <p class="card-text">Mon - Sun: 5AM - 11PM</p>
                         <a href="tel: 1234567890">Call Now</a>
                     </div>
                     <div class="info-card">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>email-outline</title><path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z" /></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <title>email-outline</title>
+                            <path
+                                d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z" />
+                        </svg>
                         <h5>Email Us</h5>
                         <p class="card-text">info@gofit.com</p>
                         <p class="card-text">support@gofit.com</p>
                         <a href="mailto: info@gofit.com">Send Email</a>
                     </div>
                     <div class="info-card">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>clock-outline</title><path d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z" /></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <title>clock-outline</title>
+                            <path
+                                d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z" />
+                        </svg>
                         <h5>Operating Hours</h5>
                         <p class="card-text">24/7 Access Available</p>
                         <p class="card-text">Staff: 5AM - 11PM</p>
@@ -303,6 +320,85 @@
         </div>
 
     </div>
+
+    <footer class="site-footer">
+        <div class="site-footer__container">
+            <div class="site-footer__main">
+                <div class="site-footer__brand">
+                    <h3>ENERGYFIT</h3>
+                    <p>Transform your body, mind, and life with our world-class training programs and expert trainers.
+                        Join the EnergyFit community today.</p>
+                    <div class="site-footer__socials">
+                        <a href="#">
+                            <img src="images/icons/facebook-f-brands-solid-full.svg" alt="Facebook" title="Facebook">
+                        </a>
+                        <a href="#">
+                            <img src="images/icons/instagram-brands-solid-full.svg" alt="Instagram" title="Instagram">
+                        </a>
+                        <a href="#">
+                            <img src="images/icons/youtube-brands-solid-full.svg" alt="Youtube" title="Youtube">
+                        </a>
+                        <a href="#">
+                            <img src="images/icons/x-twitter-brands-solid-full.svg" alt="Twitter" title="Twitter">
+                        </a>
+                    </div>
+                </div>
+                <div class="site-footer__quick-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#programs">Programs</a></li>
+                        <li><a href="#trainers">Trainers</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="site-footer__programs">
+                    <h3>Our Programs</h3>
+                    <ul>
+                        <li>Strength Training</li>
+                        <li>Cardio Training</li>
+                        <li>HIIT Classes</li>
+                        <li>Personal Training</li>
+                        <li>Yoga & Flexibility</li>
+                        <li>Group Classes</li>
+                    </ul>
+                </div>
+                <div class="site-footer__contact">
+                    <h3>Get in Touch</h3>
+                    <ul>
+                        <div class="site-footer__contact-group">
+                            <li><img src="images/icons/location-dot-solid-full.svg" alt="location-icon"> Visit Us</li>
+                            <p>123 Fitness Street</p>
+                            <p>Downtown, ND 100001</p>
+                        </div>
+                        <div class="site-footer__contact-group">
+                            <li><img src="images/icons/phone-solid-full.svg" alt="phone-icon"> Call Us</li>
+                            <a href="tel: 1234567890">+91 1234567890</a>
+                            <p>Mon - Sun: 5AM - 11PM</p>
+                        </div>
+                        <div class="site-footer__contact-group">
+                            <li><img src="images/icons/envelope-solid-full.svg" alt="envelope-icon"> Email Us</li>
+                            <a href="mailto: info@gofit.com">info@gofit.com</a>
+                            <a href="mailto: support@gofit.com">support@gofit.com</a>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <div class="site-footer__bottom">
+                <p>© 2025 GoFit. All rights reserved. Designed and built by Sahil Khan</p>
+                <div class="site-footer__legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">FAQs</a>
+                </div>
+            </div>
+        </div>
+        <div class="back-to-top-btn">
+            <img src="images/icons/arrow-up-solid-full.svg" alt="Move to top">
+        </div>
+    </footer>
 </body>
+
 
 </html>
