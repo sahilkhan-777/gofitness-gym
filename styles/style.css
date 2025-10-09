@@ -8,25 +8,19 @@
 }
 
 :root {
-    --primary-clr: #ffffff;
-    --primary-accent: #3f2689;
-    --primary-accent-hover: #38227a;
-    --secondary-accent: #7755ff;
-    --secondary-accent-hover: #6c4cec;
-    --tertiary-accent: #6257e3;
-    --tertiary-accent-hover: #4e44b8;
     --primary-font: "League Spartan", serif;
     --secondary-font: "Sanchez", sans-serif;
-    --clr-primary-dark: hsl(263, 100%, 17%);
-    --clr-primary-base: hsl(262, 67%, 32%);
-    --clr-primary-mid: hsl(261, 44%, 51%);
-    --clr-accent: hsl(266, 70%, 74%);
-    --clr-white: hsl(0, 0%, 100%);
-    --clr-black: hsl(0, 0%, 0%);
-}
-
-body {
-    color: var(--primary-clr);
+    --dark-grey-crimson-clr: hsl(345, 21%, 7%);
+    --dark-grey-crimson-hover: hsl(345, 21%, 12%);
+    --dark-grey-neon-pink-clr: hsl(313, 33%, 19%);
+    --dark-grey-neon-pink-hover: hsl(313, 33%, 25%);
+    --darkneon-pink-clr: hsl(312, 61%, 22%);
+    --darkneon-pink-hover: hsl(312, 61%, 18%);
+    --magenta-clr:hsl(317, 59%, 38%);
+    --magenta-hover: hsl(317, 59%, 30%);
+    --lightgreen-clr: hsl(150, 81%, 94%);
+    --white-clr: hsl(0, 0%, 100%);
+    --black-clr: hsl(0, 0%, 0%);
 }
 
 .site-hero {
@@ -36,6 +30,7 @@ body {
     background-size: cover;
     background-color: rgba(0, 0, 0, 0.3);
     background-blend-mode: overlay;
+    color: var(--white-clr);
     display: flex;
     flex-direction: column;
     padding: 0.5rem 2.5rem;
@@ -60,7 +55,7 @@ body {
 
 .site-hero__nav-link {
     text-decoration: none;
-    color: var(--primary-clr);
+    color: var(--white-clr);
     position: relative;
 }
 
@@ -71,7 +66,7 @@ body {
     top: 100%;
     height: 3px;
     border-radius: 16px;
-    background-color: #fff;
+    background-color: var(--white-clr);
     width: 0;
     transition: width 0.3s ease;
 }
@@ -115,10 +110,10 @@ body {
 }
 
 .site-hero__cta-btn {
-    background-color: var(--primary-accent);
+    background-color: var(--darkneon-pink-clr);
     border: none;
     border-radius: 12px;
-    color: var(--primary-clr);
+    color: var(--white-clr);
     padding: 0.5rem 1rem;
     font-size: 1.2rem;
     font-family: var(--secondary-font);
@@ -129,8 +124,8 @@ body {
     outline: none;
 }
 
-.site-hero__cta-button:hover {
-    background-color: var(--primary-accent-hover);
+.site-hero__cta-btn:hover {
+    background-color: var(--darkneon-pink-hover);
 }
 
 .site-hero__stats {
@@ -150,56 +145,45 @@ body {
 
 
 /* About section */
-#about {
+.site-about {
     padding: 2.5rem;
 }
 
-.about-container {
+.site-about__container {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    color: var(--primary-accent);
     font-family: var(--secondary-font);
 }
 
-.about-container img {
+.site-about__container img {
     border-radius: 32px;
 }
 
-.about-container .about-text {
+.site-about__text {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-.about-container h3 {
-    font-weight: 400;
-    font-size: 1.5rem;
-    text-transform: uppercase;
+.site-about__headline>span {
+    color: var(--magenta-clr);
 }
-
-.about-container h2 {
-    font-size: 2rem;
-    font-family: var(--primary-font);
-    font-weight: 800;
+.site-about__desc{
+    color: var(--dark-grey-neon-pink-clr);
 }
-
-.about-container h2>span {
-    color: var(--secondary-accent);
-}
-
 
 .site-programs,
 .site-trainers,
 .site-pricing,
 .site-contact {
-    color: var(--primary-accent);
     padding: 2.5rem;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
 }
 
+.site-about__title,
 .site-programs__title,
 .site-trainers__title,
 .site-pricing__title,
@@ -207,16 +191,19 @@ body {
     font-size: 1.5rem;
     font-weight: 400;
     font-family: var(--secondary-font);
+    color: var(--dark-grey-crimson-clr);
     text-transform: uppercase;
     text-align: center;
 }
 
+.site-about__headline,
 .site-programs__headline,
 .site-trainers__headline,
 .site-pricing__tagline,
 .site-contact__headline {
     font-size: 2rem;
     font-family: var(--primary-font);
+    color: var(--dark-grey-crimson-clr);
     text-align: center;
 }
 
@@ -232,8 +219,8 @@ body {
 .site-programs__card,
 .site-trainers__card,
 .site-pricing__card {
-    color: var(--primary-clr);
-    background-color: var(--primary-accent);
+    color: var(--white-clr);
+    background-color: var(--dark-grey-neon-pink-clr);
     border-radius: 36px;
     max-width: fit-content;
 }
@@ -271,22 +258,22 @@ body {
 }
 
 .site-trainers__headline>span {
-    color: var(--secondary-accent);
+    color: var(--magenta-clr);
 }
 
 .site-trainers__card-text .site-trainers__card-name {
     font-size: 2rem;
 }
 
-.site-trainers__card-text .site-trainers__card-speciality-title  {
-    color: var(--tertiary-accent);
+.site-trainers__card-designation, .site-trainers__card-speciality-title  {
+    color: var(--magenta-clr);
 }
 
 
 .site-trainers__card-book-btn,
 .site-pricing__book-btn {
     background-color: transparent;
-    border: 1px solid var(--secondary-accent);
+    border: 1px solid var(--magenta-clr);
     padding: 0.5rem 1rem;
     border-radius: 36px;
     letter-spacing: 1.2px;
@@ -298,12 +285,12 @@ body {
 
 .site-trainers__card-book-btn a,
 .site-pricing__book-btn a {
-    color: var(--primary-clr);
+    color: var(--white-clr);
     text-decoration: none;
 }
 
 .site-trainers__card-book-btn:hover {
-    background-color: var(--secondary-accent-hover);
+    background-color: var(--magenta-clr);
 }
 
 .site-trainers__card-book-btn:focus {
@@ -318,7 +305,7 @@ body {
 }
 
 .site-trainers__card-skills-list>li {
-    background-color: var(--secondary-accent);
+    background-color: var(--magenta-clr);
     margin: 0.2rem;
     text-align: center;
     max-width: max-content;
@@ -336,13 +323,6 @@ body {
 .site-pricing__option,
 .site-pricing__desc {
     text-align: center;
-}
-
-.site-pricing__tagline {
-    font-family: var(--secondary-font);
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-    color: var(--secondary-accent);
 }
 
 .site-pricing__card .site-pricing__option {
@@ -364,16 +344,16 @@ body {
 }
 .site-pricing__price>span {
     font-size: 3rem;
-    color: var(--tertiary-accent);
+    color: var(--magenta-clr);
 }
 
 .site-pricing__book-btn {
-    background-color: var(--tertiary-accent);
+    background-color: var(--magenta-clr);
     border: none;
 }
 
 .site-pricing__book-btn:hover {
-    background-color: var(--tertiary-accent-hover);
+    background-color: var(--magenta-hover);
 }
 
 /* contact section */
@@ -386,17 +366,17 @@ body {
 }
 
 .site-contact__headline {
-    color: var(--secondary-accent);
+    color: var(--magenta-clr);
 }
 
 .site-contact__headline>span {
-    color: var(--primary-accent);
+    color: var(--dark-grey-crimson-clr);
 }
 
 .site-contact__tagline {
     font-family: var(--secondary-font);
     text-align: center;
-    color: var(--secondary-accent);
+    color: var(--dark-grey-neon-pink-clr);
 }
 
 .site-contact__container {
@@ -408,9 +388,9 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    background-color: var(--secondary-accent);
+    background-color: var(--magenta-clr);
     padding: 2rem;
-    color: var(--primary-clr);
+    color: var(--white-clr);
     border-radius: 16px;
     font-family: var(--secondary-font);
 }
@@ -435,7 +415,7 @@ body {
 .site-contact__form-group input::placeholder,
 .site-contact__form-group textarea::placeholder {
     font-family: var(--secondary-font);
-    color: var(--primary-accent);
+    color: var(--dark-grey-neon-pink-clr);
 }
 
 .site-contact__form-group textarea {
@@ -453,9 +433,9 @@ body {
     outline: 2px solid red;
 }
 .site-contact__form-submit-btn {
-    background-color: var(--primary-accent);
+    background-color: var(--dark-grey-neon-pink-clr);
     border: none;
-    color: var(--primary-clr);
+    color: var(--white-clr);
     padding: 0.5rem 1rem;
     font-family: var(--secondary-font);
     cursor: pointer;
@@ -465,11 +445,13 @@ body {
     text-transform: uppercase;
     gap: 0.5rem;
 }
-
+.site-contact__form-submit-btn:hover{
+    background-color: var(--dark-grey-neon-pink-hover);
+}
 .site-contact__form-submit-btn svg {
     width: 1.5rem;
     height: 1.5rem;
-    fill: var(--primary-clr);
+    fill: var(--white-clr);
 }
 
 .site-contact__info {
@@ -496,8 +478,8 @@ body {
     gap: 1rem;
     border-radius: 36px;
     padding: 1.5rem;
-    background-color: var(--secondary-accent);
-    color: var(--primary-clr);
+    background-color: var(--magenta-clr);
+    color: var(--white-clr);
 }
 
 .site-contact__info-card-title, 
@@ -512,13 +494,13 @@ body {
 
 .site-contact__info-card a {
     text-decoration: none;
-    color: var(--primary-accent);
+    color: var(--dark-grey-crimson-clr);
 }
 
 .site-contact__info-card svg {
     width: 3rem;
     height: 3rem;
-    background-color: var(--primary-accent);
+    background-color: var(--darkneon-pink-clr);
     padding: 10px;
     fill: var(--primary-clr);
 }
@@ -529,8 +511,9 @@ body {
 }
 
 .site-footer{
-    background-color: var(--primary-accent);
+    background-color: var(--dark-grey-crimson-clr);
     font-family: var(--secondary-font);
+    color: var(--white-clr);
     padding: 2rem;
     display: flex;
     flex-direction: column;
@@ -541,7 +524,9 @@ body {
     margin-bottom: 1rem;
     font-weight: 400;
 }
-
+.site-footer__title{
+    color: var(--magenta-clr);
+}
 .site-footer ul{
     padding: 0.5rem 1.5rem;
     display: flex;
@@ -615,7 +600,7 @@ body {
 
 .site-footer__bottom{
     margin-top: 1.5rem;
-    border-top: 1px solid var(--secondary-accent);
+    border-top: 1px solid var(--magenta-clr);
     padding-top: 1rem;
     display: flex;
     flex-direction: column;
@@ -672,11 +657,11 @@ body {
         gap: 3.5rem;
     }
 
-    #about {
+    .site-about {
         padding: 3rem;
     }
 
-    .about-container h3 {
+    .site-about__title {
         font-size: 2rem;
         animation: fade-in 3s linear;
     }
@@ -691,11 +676,11 @@ body {
         }
     }
 
-    .about-container h2 {
+    .site-about__headline {
         font-size: 3rem;
     }
 
-    .about-container p {
+    .site-about__desc {
         font-size: 1.8rem;
     }
 
@@ -809,36 +794,36 @@ body {
     }
 
     /* About section */
-    #about {
+    .site-about {
         padding: 3.5rem 3rem;
     }
 
-    .about-container {
+    .site-about__container {
         padding: 4.5rem 1.5rem;
         display: flex;
         flex-direction: row-reverse;
         gap: 2.5rem;
     }
 
-    .about-container .about-text {
+    .site-about__text {
         position: relative;
         top: -100px;
     }
 
-    .about-container h3 {
+    .site-about__title {
         font-size: 2.5rem;
     }
 
-    .about-container h2 {
+    .site-about__headline {
         font-size: 3.5rem;
     }
 
-    .about-container p {
+    .site-about__desc {
         font-size: 1.8rem;
         text-wrap: wrap;
     }
 
-    .about-container img {
+    .site-about__container img {
         width: 600px;
         max-width: 100%;
     }
@@ -850,6 +835,11 @@ body {
     .site-pricing,
     .site-contact {
         padding: 3.5rem;
+    }
+
+    .site-programs,
+    .site-pricing{
+        background-color: var(--lightgreen-clr);
     }
 
     .site-programs__title,
