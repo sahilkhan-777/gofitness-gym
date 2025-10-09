@@ -17,13 +17,19 @@
     --tertiary-accent-hover: #4e44b8;
     --primary-font: "League Spartan", serif;
     --secondary-font: "Sanchez", sans-serif;
+    --clr-primary-dark: hsl(263, 100%, 17%);
+    --clr-primary-base: hsl(262, 67%, 32%);
+    --clr-primary-mid: hsl(261, 44%, 51%);
+    --clr-accent: hsl(266, 70%, 74%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-black: hsl(0, 0%, 0%);
 }
 
 body {
     color: var(--primary-clr);
 }
 
-.hero {
+.site-hero {
     background-image: url("../images/gym-bg.webp");
     width: 100%;
     background-position: center;
@@ -37,7 +43,7 @@ body {
 }
 
 
-header {
+.site-hero__header {
     margin-top: 1rem;
     font-family: var(--secondary-font);
     text-transform: uppercase;
@@ -45,53 +51,45 @@ header {
     align-items: center;
 }
 
-header ul {
+.site-hero__nav-list {
     list-style: none;
     display: flex;
     justify-content: space-between;
     text-transform: none;
 }
 
-header a {
+.site-hero__nav-link {
     text-decoration: none;
     color: var(--primary-clr);
     position: relative;
 }
 
-header a::after {
+.site-hero__nav-link::after {
     content: "";
     position: absolute;
+    left: 0;
+    top: 100%;
     height: 3px;
     border-radius: 16px;
     background-color: #fff;
-    left: 0;
-    top: 100%;
+    width: 0;
+    transition: width 0.3s ease;
 }
 
-@keyframes slide {
-    from {
-        width: 0%;
-    }
-
-    to {
-        width: 100%;
-    }
+.site-hero__nav-link:hover::after {
+    width: 100%;
 }
 
-header ul li:hover a::after {
-    animation: slide 1s linear infinite;
-}
-
-.menu {
+.site-hero__nav {
     visibility: hidden;
 }
 
-.intro {
+.site-hero__intro {
     display: flex;
     justify-content: center;
 }
 
-.main {
+.site-hero__main {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -99,24 +97,24 @@ header ul li:hover a::after {
     max-width: max-content;
 }
 
-.main h1 {
+.site-hero__main h1 {
     font-family: var(--primary-font);
     font-weight: 800;
     font-size: 2.8rem;
 }
 
-.main p {
+.site-hero__main p {
     font-family: var(--secondary-font);
     font-size: 1rem;
     text-transform: uppercase;
 }
 
-.btn-container {
+.site-hero__cta {
     display: flex;
     justify-content: center;
 }
 
-.btn-container .cta-button {
+.site-hero__cta-btn {
     background-color: var(--primary-accent);
     border: none;
     border-radius: 12px;
@@ -127,15 +125,15 @@ header ul li:hover a::after {
     cursor: pointer;
 }
 
-.btn-container .cta-button:focus {
+.site-hero__cta-btn:focus {
     outline: none;
 }
 
-.btn-container .cta-button:hover {
+.site-hero__cta-button:hover {
     background-color: var(--primary-accent-hover);
 }
 
-.info {
+.site-hero__stats {
     display: flex;
     justify-content: space-around;
     text-align: center;
@@ -145,7 +143,7 @@ header ul li:hover a::after {
     font-family: var(--secondary-font);
 }
 
-.info-item p:first-child {
+.site-hero__stat p:first-child {
     font-family: var(--primary-font);
     font-weight: bold;
 }
@@ -191,7 +189,10 @@ header ul li:hover a::after {
 }
 
 
-.section-container {
+.site-programs,
+.site-trainers,
+.site-pricing,
+.site-contact {
     color: var(--primary-accent);
     padding: 2.5rem;
     display: flex;
@@ -199,7 +200,10 @@ header ul li:hover a::after {
     gap: 0.5rem;
 }
 
-.section-container h3 {
+.site-programs__title,
+.site-trainers__title,
+.site-pricing__title,
+.site-contact__title {
     font-size: 1.5rem;
     font-weight: 400;
     font-family: var(--secondary-font);
@@ -207,65 +211,80 @@ header ul li:hover a::after {
     text-align: center;
 }
 
-.section-container h2 {
+.site-programs__headline,
+.site-trainers__headline,
+.site-pricing__tagline,
+.site-contact__headline {
     font-size: 2rem;
     font-family: var(--primary-font);
     text-align: center;
 }
 
-.section-container .card-container {
+.site-programs__card-container,
+.site-trainers__card-container,
+.site-pricing__card-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 2.5rem;
 }
 
-.section-container .card-container .card {
+.site-programs__card,
+.site-trainers__card,
+.site-pricing__card {
     color: var(--primary-clr);
     background-color: var(--primary-accent);
     border-radius: 36px;
     max-width: fit-content;
 }
 
-.section-container .card-container .card .card-text {
+.site-programs__card .site-programs__card-text,
+.site-trainers__card-text,
+.site-pricing__card-text {
     padding: 1rem 1.5rem;
 }
 
-.section-container .card-container .card .card-text h4 {
+.site-programs__card-text h4,
+.site-trainers__card-text h4,
+.site-pricing__card-text h4 {
     font-family: var(--primary-font);
     font-size: 1.5rem;
 }
 
-.section-container .card-container .card .card-text p {
+.site-programs__card-text .site-programs__card-desc,
+.site-trainers__card-text .site-trainers__card-desc {
     font-family: var(--secondary-font);
     margin: 1rem 0;
 }
 
-.section-container .card-container .card .card-text ul {
+.site-programs__card-text .site-programs__card-included-list,
+.site-trainers__card-text .site-trainers__card-skills-list,
+.site-pricing__features {
     padding: 0.5rem 1.5rem;
     font-family: var(--secondary-font);
 }
 
-.section-container .card-container .card .card-img-top {
+.site-programs__card-img-top,
+.site-trainers__card-img-top {
     max-width: 100%;
     border-radius: 36px 36px 0 0;
 }
 
-.section-container h2>span {
+.site-trainers__headline>span {
     color: var(--secondary-accent);
 }
 
-.section-container .card-container .card .card-text h4.trainer-name {
+.site-trainers__card-text .site-trainers__card-name {
     font-size: 2rem;
 }
 
-.section-container .card-container .card .card-text .trainer-designation,
-.trainer-speciality {
+.site-trainers__card-text .site-trainers__card-speciality-title  {
     color: var(--tertiary-accent);
 }
 
 
-.section-container .card-container .card .card-text .book-btn {
+.site-trainers__card-book-btn,
+.site-pricing__book-btn {
     background-color: transparent;
     border: 1px solid var(--secondary-accent);
     padding: 0.5rem 1rem;
@@ -277,27 +296,28 @@ header ul li:hover a::after {
     margin: 0.5rem 0;
 }
 
-.section-container .card-container .card .card-text .book-btn a {
+.site-trainers__card-book-btn a,
+.site-pricing__book-btn a {
     color: var(--primary-clr);
     text-decoration: none;
 }
 
-.section-container .card-container .card .card-text .book-btn:hover {
+.site-trainers__card-book-btn:hover {
     background-color: var(--secondary-accent-hover);
 }
 
-.section-container .card-container .card .card-text .book-btn:focus {
+.site-trainers__card-book-btn:focus {
     outline: none;
 }
 
-.section-container .card-container .card .card-text .trainer-skills {
+.site-trainers__card-skills-list {
     list-style: none;
     padding: 0;
     display: flex;
     flex-wrap: wrap;
 }
 
-.section-container .card-container .card .card-text .trainer-skills>li {
+.site-trainers__card-skills-list>li {
     background-color: var(--secondary-accent);
     margin: 0.2rem;
     text-align: center;
@@ -308,66 +328,83 @@ header ul li:hover a::after {
 
 
 /* Pricing section */
-.section-container#pricing h4,
-.section-container#pricing p {
+.site-pricing__title{
+    font-family: var(--primary-font);
+    font-weight: 700;
+}
+.site-pricing__price,
+.site-pricing__option,
+.site-pricing__desc {
     text-align: center;
 }
 
-.section-container #pricing-title {
-    font-family: var(--primary-font);
-    text-transform: uppercase;
-    margin-bottom: 0.5rem;
-    font-weight: 700;
-}
-
-.section-container #pricing-tagline {
+.site-pricing__tagline {
     font-family: var(--secondary-font);
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
     color: var(--secondary-accent);
 }
 
-.section-container#pricing .card-container .card-text .pricing-option {
+.site-pricing__card .site-pricing__option {
     font-size: 2.5rem;
 }
 
-.section-container#pricing .card-container .card-text p {
-    font-size: 1.2rem;
+.site-pricing__desc{
+    font-family: var(--secondary-font);
 }
 
-.section-container#pricing .card-container .card-text .price>span {
+.site-pricing__card-text{
+    display:flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.site-pricing__price {
+    font-size: 1.2rem;
+}
+.site-pricing__price>span {
     font-size: 3rem;
     color: var(--tertiary-accent);
 }
 
-.section-container#pricing .card-container .card .book-btn {
+.site-pricing__book-btn {
     background-color: var(--tertiary-accent);
     border: none;
 }
 
-.section-container#pricing .card-container .card .book-btn:hover {
+.site-pricing__book-btn:hover {
     background-color: var(--tertiary-accent-hover);
 }
 
 /* contact section */
-.contact {
+.site-contact {
     padding: 1.5rem;
 }
 
-.contact h2 {
+.site-contact__title, .site-contact__headline, .site-contact__tagline{
+    margin-bottom: 0.5rem;
+}
+
+.site-contact__headline {
     color: var(--secondary-accent);
 }
 
-.contact h2>span {
-    color: var(--primary-accent)
+.site-contact__headline>span {
+    color: var(--primary-accent);
 }
 
-.contact .tagline {
+.site-contact__tagline {
     font-family: var(--secondary-font);
     text-align: center;
+    color: var(--secondary-accent);
 }
 
-.contact-container .contact-form {
+.site-contact__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+.site-contact__form {
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -378,42 +415,44 @@ header ul li:hover a::after {
     font-family: var(--secondary-font);
 }
 
-.contact-container .contact-form h4 {
+.site-contact__form-title {
     font-family: var(--primary-font);
     font-size: 1.5rem;
 }
 
-.contact-container .contact-form .input-group {
+.site-contact__form-group {
     display: flex;
     flex-direction: column;
     gap: 0.2rem;
 }
 
-.contact-container .contact-form input {
+.site-contact__form-group input {
     padding: 0.5rem;
     border-radius: 0;
     border: none;
 }
 
-.contact-container .contact-form input::placeholder,
-.contact-container .contact-form textarea::placeholder {
+.site-contact__form-group input::placeholder,
+.site-contact__form-group textarea::placeholder {
     font-family: var(--secondary-font);
     color: var(--primary-accent);
 }
 
-.contact-container .contact-form textarea {
+.site-contact__form-group textarea {
     padding: 0.5rem;
     border-radius: 0;
     border: none;
     resize: vertical;
 }
 
-.contact-container .contact-form input:focus,
-.contact-container .contact-form textarea:focus {
+.site-contact__form-group input:focus,
+.site-contact__form-group textarea:focus {
     outline: none;
 }
-
-.contact-container .contact-form .submit-btn {
+.site-contact__form-group input:focus:invalid{
+    outline: 2px solid red;
+}
+.site-contact__form-submit-btn {
     background-color: var(--primary-accent);
     border: none;
     color: var(--primary-clr);
@@ -427,20 +466,20 @@ header ul li:hover a::after {
     gap: 0.5rem;
 }
 
-.contact-container .contact-form .submit-btn svg {
+.site-contact__form-submit-btn svg {
     width: 1.5rem;
     height: 1.5rem;
     fill: var(--primary-clr);
 }
 
-.contact-container .contact-info {
+.site-contact__info {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
     padding: 1.5rem 0;
 }
 
-.contact-container .contact-info .info-card-container {
+.site-contact__info-cards {
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
@@ -448,7 +487,7 @@ header ul li:hover a::after {
     font-family: var(--secondary-font);
 }
 
-.section-container .contact-container .contact-info .info-card-container .info-card {
+.site-contact__info-card {
     max-width: 350px;
     width: 100%;
     height: 250px;
@@ -461,22 +500,22 @@ header ul li:hover a::after {
     color: var(--primary-clr);
 }
 
-.section-container .contact-container .contact-info .info-card-container .info-card h5,
-a {
+.site-contact__info-card-title, 
+.site-contact__info-card a {
     font-size: 1.2rem;
     font-weight: 500;
 }
 
-.section-container .contact-container .contact-info .info-card-container .info-card p {
+.site-contact__info-card-text {
     opacity: 0.8;
 }
 
-.section-container .contact-container .contact-info .info-card-container .info-card a {
+.site-contact__info-card a {
     text-decoration: none;
     color: var(--primary-accent);
 }
 
-.section-container .contact-container .contact-info .info-card-container .info-card svg {
+.site-contact__info-card svg {
     width: 3rem;
     height: 3rem;
     background-color: var(--primary-accent);
@@ -484,7 +523,7 @@ a {
     fill: var(--primary-clr);
 }
 
-.section-container .contact-container .contact-info #googleMap iframe {
+.site-contact__info-map iframe {
     width: 100%;
     height: 300px;
 }
@@ -616,20 +655,20 @@ a {
 }
 
 @media (min-width: 750px) {
-    .hero {
+    .site-hero {
         padding: 1rem 2.5rem;
     }
 
-    header {
+    .site-hero__header {
         font-size: 1.5rem;
         justify-content: space-between;
     }
 
-    header .menu {
+    .site-hero__nav {
         visibility: visible;
     }
 
-    .menu ul {
+    .site-hero__nav-list {
         gap: 3.5rem;
     }
 
@@ -661,103 +700,111 @@ a {
     }
 
 
-    .section-container {
+    .site-programs,
+    .site-trainers,
+    .site-pricing {
         padding: 2.5rem;
     }
 
-    .section-container h3 {
+    .site-programs__title,
+    .site-trainers__title,
+    .site-pricing__title {
         font-size: 2.5rem;
     }
 
-    .section-container h2 {
+    .site-programs__headline,
+    .site-trainers__headline {
         font-size: 3.5rem;
     }
 
-    .section-container .card-container {
+    .site-programs__card-container,
+    .site-trainers__card-container,
+    .site-pricing__card-container {
         flex-direction: row;
         justify-content: center;
         gap: 2rem;
     }
 
-    .section-container .card-container .card {
+    .site-programs__card,
+    .site-trainers__card,
+    .site-pricing__card {
         max-width: 400px;
         width: 100%;
     }
 
-    .section-container .card-container .card .card-text {
+    .site-programs__card-text,
+    .site-trainers__card-text,
+    .site-pricing__card-text {
         padding: 1rem 1.5rem;
     }
 
-    .section-container .card-container .card .card-text h4 {
+    .site-programs__card-text h4,
+    .site-pricing__card-text h4 {
         font-size: 1.5rem;
     }
 
     /* Pricing section */
-    .section-container#pricing h4,
-    .section-container#pricing p {
-        text-align: center;
-    }
 
-    .section-container #pricing-title {
+    .site-pricing__title {
         font-family: var(--primary-font);
         text-transform: uppercase;
         margin-bottom: 0.5rem;
         font-weight: 700;
     }
 
-    .section-container #pricing-tagline {
+    .site-pricing__tagline {
         font-family: var(--secondary-font);
         font-size: 1.2rem;
         margin-bottom: 0.5rem;
         color: var(--secondary-accent);
     }
 
-    .section-container#pricing .card-container .card-text .pricing-option {
+    .site-pricing__option {
         font-size: 2.5rem;
     }
 
-    .section-container#pricing .card-container .card-text .price>span {
+    .site-price__price>span {
         font-size: 3rem;
         color: var(--tertiary-accent);
     }
 }
 
 @media (min-width: 1200px) {
-    .hero {
+    .site-hero {
         padding: 1rem 3.5rem;
     }
 
-    header {
+    .site-hero__header {
         padding: 0;
         font-size: 2.5rem;
         justify-content: space-between;
     }
 
-    header .menu {
+    .site-hero__nav {
         visibility: visible;
     }
 
-    .menu ul {
+    .site-hero__nav-list {
         gap: 4.9rem;
     }
-    .menu ul li a{
+    .site-hero__nav-link{
         font-size: 2rem;
     }
-    .main h1 {
+    .site-hero__main .site-hero__headline {
         font-size: 7.5rem;
     }
 
-    .main p {
+    .site-hero__main .site-hero__subheadline {
         font-size: 1.5rem;
         text-align: left;
     }
 
-    .btn-container .cta-button {
+    .site-hero__cta-btn {
         padding: 1rem 1.5rem;
         font-size: 1.5rem;
     }
 
-    .info {
+    .site-hero__stats {
         font-size: 2.5rem;
     }
 
@@ -798,113 +845,123 @@ a {
 
     /* programs, trainer-details section */
 
-    .section-container {
+    .site-programs,
+    .site-trainers,
+    .site-pricing,
+    .site-contact {
         padding: 3.5rem;
     }
 
-    .section-container h3 {
+    .site-programs__title,
+    .site-trainers__title,
+    .site-contact__title {
         font-size: 2.5rem;
         font-weight: 400;
     }
 
-    .section-container h2 {
+    .site-programs__headline,
+    .site-trainers__headline,
+    .site-contact__headline {
         font-size: 3.5rem;
     }
 
-    .section-container .card-container {
+    .site-programs__card-container,
+    .site-trainers__card-container,
+    .site-pricing__card-container {
         flex-direction: row;
         justify-content: center;
         gap: 2.5rem;
     }
-
-    .section-container .card-container .card {
+    .site-pricing__desc{
+        font-size: 1.2rem;
+    }
+    .site-programs__card,
+    .site-trainers__card,
+    .site-pricing__card {
         max-width: 400px;
         width: 100%;
     }
 
-    .section-container .card-container .card .card-text {
+    .site-programs__card-text,
+    .site-trainers__card-text,
+    .site-pricing__card-text {
         padding: 1.5rem 2rem;
     }
 
-    .section-container .card-container .card .card-text h4 {
+    .site-programs__card-text .site-programs__card-name,
+    .site-trainers__card-text .site-trainers__card-name {
         font-size: 2rem;
     }
 
-    .section-container .card-container .card .card-text ul {
+    .site-programs__card .site-programs__card-included-list,
+    .site-pricing__features {
         padding: 0.5rem 2rem;
     }
 
-    .section-container .card-container .card .card-text .trainer-designation {
-        font-size: 1.5rem;
-    }
-
-    .section-container .card-container .card .card-text .trainer-speciality {
-        font-size: 1.5rem;
-    }
-
     /* Pricing section */
-    .section-container #pricing-tagline {
-        font-size: 1.5rem;
-    }
 
-    .section-container#pricing .card-container .card-text .pricing-option {
+    .site-pricing__option {
         font-size: 3rem;
     }
 
-    .section-container#pricing .card-container .card-text .price>span {
+    .site-pricing__price>span {
         font-size: 3.5rem;
     }
 
     /* contact section */
-    #contact .tagline {
+    .site-contact__tagline {
         font-size: 1.2rem;
     }
 
-    .contact-container {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        justify-content: space-between;
-        padding: 2rem;
+    .site-contact__container{
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
     }
-
-    .contact-container .contact-form {
-        width: 50%;
+    .site-contact__form {
         padding: 3rem;
         gap: 2rem;
     }
-
-    .contact-container .contact-form h4 {
+    
+    .site-contact__form-title {
         font-size: 2.5rem;
         margin-bottom: 1rem;
     }
 
-    .contact-container .contact-form input {
+    .site-contact__form-group input {
         padding: 1.5rem;
     }
 
-    .contact-container .contact-form input,
+    .site-contact__form-group input,
     label,
     textarea {
         font-size: 1.2rem;
     }
-
-    .contact-container .contact-form .submit-btn {
+    
+    .site-contact__form-submit-btn {
         padding: 1rem 2rem;
         font-size: 1.2rem;
     }
-
-    .contact-container .contact-form textarea {
-        height: 10rem;
+    
+    .site-contact__form-group textarea {
+        height: 15rem;
+    }
+    
+    .site-contact__info-cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 2rem;
     }
 
-    .contact-container .contact-info {
+    .site-contact__info-map{
+        padding: 0 2rem;
+    }
+    .site-contact__info {
         display: flex;
         flex-direction: column;
         padding: 0.5rem 0;
     }
 
-    .contact-container .contact-info .info-card-container {
+    .site-contact__info-cards {
         grid-template-columns: 1fr 1fr;
         gap: 2rem;
     }

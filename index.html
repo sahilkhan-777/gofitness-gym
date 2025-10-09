@@ -12,47 +12,47 @@
 <body>
 
     <!-- Hero section -->
-    <div class="hero" id="home">
-        <header>
-            <div class="title">
-                <h3>GoFit</h3>
+    <div class="site-hero" id="home">
+        <header class="site-hero__header">
+            <div class="site-hero__brand">
+                <h3 class="site-hero__brand-title">GoFit</h3>
             </div>
-            <div class="menu">
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#programs">Programs</a></li>
+            <nav class="site-hero__nav">
+                <ul class="site-hero__nav-list">
+                    <li class="site-hero__nav-item"><a class="site-hero__nav-link" href="#home">Home</a></li>
+                    <li class="site-hero__nav-item"><a class="site-hero__nav-link" href="#about">About</a></li>
+                    <li class="site-hero__nav-item"><a class="site-hero__nav-link" href="#contact">Contact</a></li>
+                    <li class="site-hero__nav-item"><a class="site-hero__nav-link" href="#programs">Programs</a></li>
                 </ul>
-            </div>
+            </nav>
         </header>
-        <div class="intro">
-            <div class="main">
-                <h1>Build strength,<br>Burn goals.</h1>
-                <p>Get fit faster with our proven training methods.</p>
+        <div class="site-hero__intro">
+            <div class="site-hero__main">
+                <h1 class="site-hero__headline">Build strength,<br>Burn goals.</h1>
+                <p class="site-hero__subheadline">Get fit faster with our proven training methods.</p>
             </div>
         </div>
-        <div class="btn-container">
-            <button class="cta-button">Start Your Journey</button>
+        <div class="site-hero__cta">
+            <button class="site-hero__cta-btn">Start Your Journey</button>
         </div>
-        <div class="info">
-            <div class="info-item">
-                <p>500+</p>
-                <p>Active Members</p>
+        <div class="site-hero__stats">
+            <div class="site-hero__stat">
+                <p class="site-hero__stat-value">500+</p>
+                <p class="site-hero__stat-label">Active Members</p>
             </div>
-            <div class="info-item">
-                <p>3</p>
-                <p>Expert Trainers</p>
+            <div class="site-hero__stat">
+                <p class="site-hero__stat-value">3</p>
+                <p class="site-hero__stat-label">Expert Trainers</p>
             </div>
-            <div class="info-item">
-                <p>6+</p>
-                <p>Years Experience</p>
+            <div class="site-hero__stat">
+                <p class="site-hero__stat-value">6+</p>
+                <p class="site-hero__stat-label">Years Experience</p>
             </div>
         </div>
     </div>
 
     <!-- ABOUT section -->
-    <div id="about" class="about">
+    <section id="about" class="about">
         <div class="about-container">
             <div class="about-text">
                 <h3>About energyfit</h3>
@@ -65,141 +65,135 @@
             </div>
             <img src="images/kettlebells.webp" alt="kettlebells">
         </div>
-    </div>
+    </section>
 
     <!-- Programs section -->
-    <div class="section-container programs" id="programs">
-        <h3>Our programs<h3>
-                <h2>Choose Your Training Program</h2>
-                <div class="card-container">
-                    <div class="card">
-                        <img src="images/deadlift.webp" alt="strength training" class="card-img-top">
-                        <div class="card-text">
-                            <h4>Strength Training</h4>
-                            <p>Build muscle mass and increase your overall strength with our comprehensive weight
-                                training programs.</p>
-                            <h4>What's included:</h4>
-                            <ul>
-                                <li>Free Weights</li>
-                                <li>Resistance Machines</li>
-                                <li>Progressive Overload</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="images/cardio.webp" alt="Cardio" class="card-img-top">
-                        <div class="card-text">
-                            <h4>Cardio</h4>
-                            <p>Improve your cardiovascular health and endurance with high-energy cardio workouts.</p>
-                            <h4>What's included:</h4>
-                            <ul>
-                                <li>HIIT Lessons</li>
-                                <li>Treadmill Sessions</li>
-                                <li>Cycling Classes</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="images/trainer.webp" alt="personal training" class="card-img-top">
-                        <div class="card-text">
-                            <h4>Personal Training</h4>
-                            <p>One-on-one coaching tailored to your specific goals and fitness level.</p>
-                            <h4>What's included:</h4>
-                            <ul>
-                                <li>Custom Programs</li>
-                                <li>Nutrition Guidance</li>
-                                <li>Progress Tracking</li>
-                            </ul>
-                        </div>
-                    </div>
+    <section class="site-programs" id="programs">
+        <h3 class="site-programs__title">Our programs</h3>
+        <h2 class="site-programs__headline">Choose Your Training Program</h2>
+        <div class="site-programs__card-container">
+            <div class="site-programs__card">
+                <img src="images/deadlift.webp" alt="strength training" class="site-programs__card-img-top">
+                <div class="site-programs__card-text">
+                    <h4 class="site-programs__card-name">Strength Training</h4>
+                    <p class="site-programs__card-desc">Build muscle mass and increase your overall strength with our comprehensive weight training programs.</p>
+                    <h4 class="site-programs__card-included-title">What's included:</h4>
+                    <ul class="site-programs__card-included-list">
+                        <li>Free Weights</li>
+                        <li>Resistance Machines</li>
+                        <li>Progressive Overload</li>
+                    </ul>
                 </div>
-    </div>
+            </div>
+            <div class="site-programs__card">
+                <img src="images/cardio.webp" alt="Cardio" class="site-programs__card-img-top">
+                <div class="site-programs__card-text">
+                    <h4 class="site-programs__card-name">Cardio</h4>
+                    <p class="site-programs__card-desc">Improve your cardiovascular health and endurance with high-energy cardio workouts.</p>
+                    <h4 class="site-programs__card-included-title">What's included:</h4>
+                    <ul class="site-programs__card-included-list">
+                        <li>HIIT Lessons</li>
+                        <li>Treadmill Sessions</li>
+                        <li>Cycling Classes</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="site-programs__card">
+                <img src="images/trainer.webp" alt="personal training" class="site-programs__card-img-top">
+                <div class="site-programs__card-text">
+                    <h4 class="site-programs__card-name">Personal Training</h4>
+                    <p class="site-programs__card-desc">One-on-one coaching tailored to your specific goals and fitness level.</p>
+                    <h4 class="site-programs__card-included-title">What's included:</h4>
+                    <ul class="site-programs__card-included-list">
+                        <li>Custom Programs</li>
+                        <li>Nutrition Guidance</li>
+                        <li>Progress Tracking</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Trainer Details Section -->
-    <div class="section-container trainers" id="trainers">
-        <h3>Meet our team<h3>
-                <h2>Expert Trainers<br><span>Ready to Guide You</span></h2>
-                <div class="card-container">
-                    <div class="card">
-                        <img src="images/sara-jhonson.webp" alt="Sara Jhonson" class="card-img-top">
-                        <div class="card-text">
-                            <h4 class="trainer-name">Sara Jhonson</h4>
-                            <h4 class="trainer-designation">Hard Trainer & Nutrionist</h4>
-                            <p>Certified personal trainer with expertise in strength training and nutrition. Helped over
-                                200 clients achieve their fitness goals.</p>
-                            <h4 class="trainer-speciality">Specialities:</h4>
-                            <ul class="trainer-skills">
-                                <li>Strength Training</li>
-                                <li>Nutrition Planning</li>
-                                <li>Body Composition</li>
-                            </ul>
-                            <button class="book-btn"><a href="mailto: sara12jhonson@outlook.com">Book
-                                    Session</a></button>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="images/mike-rodriguez.webp" alt="Mike Rodriguez" class="card-img-top">
-                        <div class="card-text">
-                            <h4 class="trainer-name">Mike Rodriguez</h4>
-                            <h4 class="trainer-designation">HIIT & Cardio Specialist</h4>
-                            <p>Former professional athlete turned trainer. Specializes in high-intensity workouts and
-                                sports performance training.</p>
-                            <h4 class="trainer-speciality">Specialities:</h4>
-                            <ul class="trainer-skills">
-                                <li>HIIT Training</li>
-                                <li>Cardio Fitness</li>
-                                <li>Athletic Performance</li>
-                            </ul>
-                            <button class="book-btn"><a href="tel: 123456789">Book Session</a></button>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="images/david-thompson.webp" alt="David Thompson" class="card-img-top">
-                        <div class="card-text">
-                            <h4 class="trainer-name">David Thompson</h4>
-                            <h4 class="trainer-designation">Powerlifting & Strength Coach</h4>
-                            <p>Champion powerlifter and strength training coach. Specializes in helping clients build
-                                raw strength and proper lifting technique.</p>
-                            <h4 class="trainer-speciality">Specialities:</h4>
-                            <ul class="trainer-skills">
-                                <li>Powerlifting</li>
-                                <li>Olympic Lifts</li>
-                                <li>Strength Development</li>
-                            </ul>
-                            <button class="book-btn"><a href="mailto: davidthompson@power.outlook.com">Book
-                                    Session</a></button>
-                        </div>
-                    </div>
+    <section class="site-trainers" id="trainers">
+        <h3 class="site-trainers__title">Meet our team</h3>
+        <h2 class="site-trainers__headline">Expert Trainers<br><span>Ready to Guide You</span></h2>
+        <div class="site-trainers__card-container">
+            <div class="site-trainers__card">
+                <img src="images/sara-jhonson.webp" alt="Sara Jhonson" class="site-trainers__card-img-top">
+                <div class="site-trainers__card-text">
+                    <h4 class="site-trainers__card-name">Sara Jhonson</h4>
+                    <h4 class="site-trainers__card-designation">Hard Trainer & Nutrionist</h4>
+                    <p class="site-trainers__card-desc">Certified personal trainer with expertise in strength training and nutrition. Helped over 200 clients achieve their fitness goals.</p>
+                    <h4 class="site-trainers__card-speciality-title">Specialities:</h4>
+                    <ul class="site-trainers__card-skills-list">
+                        <li>Strength Training</li>
+                        <li>Nutrition Planning</li>
+                        <li>Body Composition</li>
+                    </ul>
+                    <button class="site-trainers__card-book-btn"><a href="mailto: sara12jhonson@outlook.com">Book Session</a></button>
                 </div>
-    </div>
+            </div>
+            <div class="site-trainers__card">
+                <img src="images/mike-rodriguez.webp" alt="Mike Rodriguez" class="site-trainers__card-img-top">
+                <div class="site-trainers__card-text">
+                    <h4 class="site-trainers__card-name">Mike Rodriguez</h4>
+                    <h4 class="site-trainers__card-designation">HIIT & Cardio Specialist</h4>
+                    <p class="site-trainers__card-desc">Former professional athlete turned trainer. Specializes in high-intensity workouts and sports performance training.</p>
+                    <h4 class="site-trainers__card-speciality-title">Specialities:</h4>
+                    <ul class="site-trainers__card-skills-list">
+                        <li>HIIT Training</li>
+                        <li>Cardio Fitness</li>
+                        <li>Athletic Performance</li>
+                    </ul>
+                    <button class="site-trainers__card-book-btn"><a href="tel: 123456789">Book Session</a></button>
+                </div>
+            </div>
+            <div class="site-trainers__card">
+                <img src="images/david-thompson.webp" alt="David Thompson" class="site-trainers__card-img-top">
+                <div class="site-trainers__card-text">
+                    <h4 class="site-trainers__card-name">David Thompson</h4>
+                    <h4 class="site-trainers__card-designation">Powerlifting & Strength Coach</h4>
+                    <p class="site-trainers__card-desc">Champion powerlifter and strength training coach. Specializes in helping clients build raw strength and proper lifting technique.</p>
+                    <h4 class="site-trainers__card-speciality-title">Specialities:</h4>
+                    <ul class="site-trainers__card-skills-list">
+                        <li>Powerlifting</li>
+                        <li>Olympic Lifts</li>
+                        <li>Strength Development</li>
+                    </ul>
+                    <button class="site-trainers__card-book-btn"><a href="mailto: davidthompson@power.outlook.com">Book Session</a></button>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Pricing section -->
-    <div class="section-container pricing" id="pricing">
-        <h3 id="pricing-title">Membership plan</h3>
-        <p id="pricing-tagline">Flexible pricing options designed to fit your budget goals. All plans include
+    <section class="site-pricing" id="pricing">
+        <h3 class="site-pricing__title">Membership Plan</h3>
+        <p class="site-pricing__tagline">Flexible pricing options designed to fit your budget goals. All plans include
             access to our world-class facilities.</p>
-        <div class="card-container">
-            <div class="card">
-                <div class="card-text">
-                    <h4 class="pricing-option">Basic</h4>
-                    <p>Perfect for beginners starting their fitness journey.</p>
-                    <h4 class="price"><span>$29</span>/month</h4>
-                    <ul class="pricing-features">
+        <div class="site-pricing__card-container">
+            <div class="site-pricing__card">
+                <div class="site-pricing__card-text">
+                    <h4 class="site-pricing__option">Basic</h4>
+                    <p class="site-pricing__desc">Perfect for beginners starting their fitness journey.</p>
+                    <h4 class="site-pricing__price"><span>$29</span>/month</h4>
+                    <ul class="site-pricing__features">
                         <li>Gym access during off-peak hours</li>
                         <li>Basic equipment usage</li>
                         <li>Locker room access</li>
                         <li>1 fitness assessment</li>
                         <li>Mobile app access</li>
                     </ul>
-                    <button class="book-btn"><a href="#contact">Get Started</a></button>
+                    <button class="site-pricing__book-btn"><a href="#contact">Get Started</a></button>
                 </div>
             </div>
-            <div class="card">
-                <div class="card-text">
-                    <h4 class="pricing-option">Premium</h4>
-                    <p>Most popular choice for fitness enthusiasts.</p>
-                    <h4 class="price"><span>$59</span>/month</h4>
-                    <ul class="pricing-features">
+            <div class="site-pricing__card">
+                <div class="site-pricing__card-text">
+                    <h4 class="site-pricing__option">Premium</h4>
+                    <p class="site-pricing__desc">Most popular choice for fitness enthusiasts.</p>
+                    <h4 class="site-pricing__price"><span>$59</span>/month</h4>
+                    <ul class="site-pricing__features">
                         <li>24/7 gym access</li>
                         <li>All equipment & facilities</li>
                         <li>Group fitness classes</li>
@@ -207,54 +201,54 @@
                         <li>Nutrition consultation</li>
                         <li>Progress tracking app</li>
                     </ul>
-                    <button class="book-btn"><a href="#contact">Most Popular</a></button>
+                    <button class="site-pricing__book-btn"><a href="#contact">Most Popular</a></button>
                 </div>
             </div>
-            <div class="card">
-                <div class="card-text">
-                    <h4 class="pricing-option">Elite</h4>
-                    <p>Complete fitness solution with premium perks.</p>
-                    <h4 class="price"><span>$99</span>/month</h4>
-                    <ul class="pricing-features">
+            <div class="site-pricing__card">
+                <div class="site-pricing__card-text">
+                    <h4 class="site-pricing__option">Elite</h4>
+                    <p class="site-pricing__desc">Complete fitness solution with premium perks.</p>
+                    <h4 class="site-pricing__price"><span>$99</span>/month</h4>
+                    <ul class="site-pricing__features">
                         <li>Everything in Premium</li>
                         <li>Unlimited personal training</li>
                         <li>VIP locker room</li>
                         <li>Supplement discounts</li>
                         <li>Priority booking</li>
                     </ul>
-                    <button class="book-btn"><a href="#contact">Get Started</a></button>
+                    <button class="site-pricing__book-btn"><a href="#contact">Get Started</a></button>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- Contact section -->
-    <div class="section-container contact" id="contact">
-        <h3>Get in touch</h3>
-        <h2>Ready to Start<br><span>Your Journey?</span></h2>
-        <p class="tagline">Have questions about our programs? Want to schedule a tour? We're here to help you take the
+    <section class="site-contact" id="contact">
+        <h3 class="site-contact__title">Get in touch</h3>
+        <h2 class="site-contact__headline">Ready to Start<br><span>Your Journey?</span></h2>
+        <p class="site-contact__tagline">Have questions about our programs? Want to schedule a tour? We're here to help you take the
             first step.</p>
-        <div class="contact-container">
-            <form action="#" class="contact-form">
-                <h4>Send Us a Message</h4>
-                <div class="input-group">
+        <div class="site-contact__container">
+            <form action="#" class="site-contact__form">
+                <h4 class="site-contact__form-title">Send Us a Message</h4>
+                <div class="site-contact__form-group">
                     <label for="name">Full Name *</label>
                     <input type="text" name="name" id="name" placeholder="Enter your full name" required>
                 </div>
-                <div class="input-group">
+                <div class="site-contact__form-group">
                     <label for="email">Email Address *</label>
                     <input type="email" name="email" id="email" placeholder="your@email.com" required>
                 </div>
-                <div class="input-group">
+                <div class="site-contact__form-group">
                     <label for="phone">Phone Number *</label>
                     <input type="tel" name="phone" id="phone" placeholder="+91 1234567890" required>
                 </div>
-                <div class="input-group">
+                <div class="site-contact__form-group">
                     <label for="message">Message *</label>
                     <textarea name="message" id="message" rows="5"
                         placeholder="Tell us about your fitness goals or ask any question.." required></textarea>
                 </div>
-                <button type="submit" class="submit-btn">
+                <button type="submit" class="site-contact__form-submit-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                         <title>email</title>
                         <path
@@ -262,54 +256,54 @@
                     </svg> Send Message
                 </button>
             </form>
-            <div class="contact-info">
-                <div class="info-card-container">
-                    <div class="info-card">
+            <div class="site-contact__info">
+                <div class="site-contact__info-cards">
+                    <div class="site-contact__info-card">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                             <title>map-marker-outline</title>
                             <path
                                 d="M12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5M12,2A7,7 0 0,1 19,9C19,14.25 12,22 12,22C12,22 5,14.25 5,9A7,7 0 0,1 12,2M12,4A5,5 0 0,0 7,9C7,10 7,12 12,18.71C17,12 17,10 17,9A5,5 0 0,0 12,4Z" />
                         </svg>
-                        <h5>Visit Us</h5>
-                        <p class="card-text">123 Fitness Street</p>
-                        <p class="card-text">Downtown, ND 100001</p>
+                        <h5 class="site-contact__info-card-title">Visit Us</h5>
+                        <p class="site-contact__info-card-text">123 Fitness Street</p>
+                        <p class="site-contact__info-card-text">Downtown, ND 100001</p>
                         <a href="tel: 1234567890">Call Now</a>
                     </div>
-                    <div class="info-card">
+                    <div class="site-contact__info-card">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                             <title>phone-outline</title>
                             <path
                                 d="M20,15.5C18.8,15.5 17.5,15.3 16.4,14.9C16.3,14.9 16.2,14.9 16.1,14.9C15.8,14.9 15.6,15 15.4,15.2L13.2,17.4C10.4,15.9 8,13.6 6.6,10.8L8.8,8.6C9.1,8.3 9.2,7.9 9,7.6C8.7,6.5 8.5,5.2 8.5,4C8.5,3.5 8,3 7.5,3H4C3.5,3 3,3.5 3,4C3,13.4 10.6,21 20,21C20.5,21 21,20.5 21,20V16.5C21,16 20.5,15.5 20,15.5M5,5H6.5C6.6,5.9 6.8,6.8 7,7.6L5.8,8.8C5.4,7.6 5.1,6.3 5,5M19,19C17.7,18.9 16.4,18.6 15.2,18.2L16.4,17C17.2,17.2 18.1,17.4 19,17.4V19Z" />
                         </svg>
-                        <h5>Call Us</h5>
-                        <p class="card-text">+91 1234567890</p>
-                        <p class="card-text">Mon - Sun: 5AM - 11PM</p>
+                        <h5 class="site-contact__info-card-title">Call Us</h5>
+                        <p class="site-contact__info-card-text">+91 1234567890</p>
+                        <p class="site-contact__info-card-text">Mon - Sun: 5AM - 11PM</p>
                         <a href="tel: 1234567890">Call Now</a>
                     </div>
-                    <div class="info-card">
+                    <div class="site-contact__info-card">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                             <title>email-outline</title>
                             <path
                                 d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z" />
                         </svg>
-                        <h5>Email Us</h5>
-                        <p class="card-text">info@gofit.com</p>
-                        <p class="card-text">support@gofit.com</p>
+                        <h5 class="site-contact__info-card-title">Email Us</h5>
+                        <p class="site-contact__info-card-text">info@gofit.com</p>
+                        <p class="site-contact__info-card-text">support@gofit.com</p>
                         <a href="mailto: info@gofit.com">Send Email</a>
                     </div>
-                    <div class="info-card">
+                    <div class="site-contact__info-card">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                             <title>clock-outline</title>
                             <path
                                 d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z" />
                         </svg>
-                        <h5>Operating Hours</h5>
-                        <p class="card-text">24/7 Access Available</p>
-                        <p class="card-text">Staff: 5AM - 11PM</p>
+                        <h5 class="site-contact__info-card-title">Operating Hours</h5>
+                        <p class="site-contact__info-card-text">24/7 Access Available</p>
+                        <p class="site-contact__info-card-text">Staff: 5AM - 11PM</p>
                     </div>
                 </div>
                 <!-- GOOGLE MAPS EMBED -->
-                <div id="googleMap">
+                <div class="site-contact__info-map">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3575.262686249369!2d92.667863274303!3d26.350364384033075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x37452700742a3e45%3A0x8aa54d543f70834!2sWK%2049!5e0!3m2!1sen!2sin!4v1759075404762!5m2!1sen!2sin"
                         width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy"
@@ -318,8 +312,7 @@
                 </div>
             </div>
         </div>
-
-    </div>
+    </section>
 
     <footer class="site-footer">
         <div class="site-footer__container">

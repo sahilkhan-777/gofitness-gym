@@ -12,7 +12,7 @@ function scrollToSection(sectionId) {
     section.scrollIntoView({ behavior: 'smooth' });
 }
 
-const startJourneyBtn = document.querySelector(".cta-button");
+const startJourneyBtn = document.querySelector(".site-hero__cta-btn");
 startJourneyBtn.addEventListener("click", function() {
     scrollToSection("contact");
 });
