@@ -346,6 +346,21 @@
     font-size: 3rem;
     color: var(--magenta-clr);
 }
+.site-pricing__features{
+    list-style: none;
+}
+.site-pricing__features li{
+    display: flex;
+    align-items: center;
+    margin: 0.3rem 0;
+}
+
+.site-pricing__features li>svg{
+    width: 1.2rem;
+    height: 1.2rem;
+    fill: var(--magenta-clr);
+    margin-right: 0.5rem;
+}
 
 .site-pricing__book-btn {
     background-color: var(--magenta-clr);
