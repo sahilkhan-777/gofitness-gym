@@ -24,6 +24,16 @@ backToTopBtn.addEventListener("click", function() {
     scrollToSection("home");
 });
 
+document.addEventListener("scroll", function() {
+    if (window.scrollY > 300) {
+        backToTopBtn.style.display = "block";
+    } else {
+        backToTopBtn.style.display = "none";
+    }
+});
+
+
+
 const navLinks = document.querySelectorAll(".site-hero__nav-link");
 navLinks.forEach(link => {
     link.addEventListener("click", function(event) {
