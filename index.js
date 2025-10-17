@@ -34,11 +34,41 @@ document.addEventListener("scroll", function() {
 
 
 
-const navLinks = document.querySelectorAll(".site-hero__nav-link");
+const navLinks = document.querySelectorAll(".site-header__nav-link");
 navLinks.forEach(link => {
     link.addEventListener("click", function(event) {
         event.preventDefault();
         const targetId = this.getAttribute("href").substring(1);    //substring removes the #
         scrollToSection(targetId);
+        if(hamburgerMenu){
+            hamburgerMenu.classList.remove("active");
+        }
     });
 });
+
+
+// hamburger menu
+const hamburgerMenuBtn = document.querySelector(".site-header__hamburger-menu-btn");
+const hamburgerMenu = document.querySelector(".site-header__hamburger-menu");
+const closeMenuBtn = document.querySelector(".site-header__close-btn");
+
+if (hamburgerMenuBtn && hamburgerMenu) {
+    hamburgerMenuBtn.addEventListener('click', () => {
+        hamburgerMenu.classList.toggle("active");
+    });
+}
+
+if(hamburgerMenu){
+    closeMenuBtn.addEventListener('click', ()=>{
+        hamburgerMenu.classList.remove("active");
+    });
+}
+
+
+// if (hamburgerMenu && hamburgerMenuBtn) {
+//   document.addEventListener("click", event => {
+//     if (!hamburgerMenu.contains(event.target) && !hamburgerMenuBtn.contains(event.target)) {
+//       hamburgerMenu.classList.remove("active");
+//     }
+//   });
+// }
