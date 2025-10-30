@@ -40,8 +40,8 @@
 
 .site-header {
     font-family: var(--secondary-font);
-    background-color: var(--white-clr);
-    color: var(--magenta-clr);
+    background-color: var(--darkneon-pink-clr);
+    color: var(--white-clr);
     text-transform: uppercase;
     display: flex;
     align-items: center;
@@ -54,10 +54,9 @@
 
 .site-header__hamburger-menu-btn{
     border: none;
-    background-color: #fff;
+    background-color: var(--darkneon-pink-clr);
 }
 .site-header__hamburger-menu-btn img{
-    filter: invert(1);
     height: 40px;
     transition: rotate 0.3s ease-in-out;
 }
@@ -67,8 +66,7 @@
     position: relative;
 }
 .site-header__hamburger-menu.active{
-    background-color: var(--white-clr);
-    color: var(--dark-grey-neon-pink-clr);
+    background-color: var(--darkneon-pink-clr);
     position: absolute;
     right: 0;
     top: 58px;
@@ -99,7 +97,7 @@
 
 .site-header__nav-link {
     text-decoration: none;
-    color: var(--magenta-clr);
+    color: var(--white-clr);
     position: relative;
 }
 
@@ -110,7 +108,7 @@
     top: 100%;
     height: 3px;
     border-radius: 16px;
-    background-color: var(--magenta-clr);
+    background-color: var(--white-clr);
     width: 0;
     transition: width 0.3s ease;
 }
@@ -367,6 +365,14 @@
 .site-pricing__option,
 .site-pricing__desc {
     text-align: center;
+}
+
+.site-pricing__tagline{
+    font-size: 1rem;
+    font-family: var(--secondary-font);
+    text-align: center;
+    color: var(--dark-grey-neon-pink-clr);
+    margin-bottom: 1rem;
 }
 
 .site-pricing__card .site-pricing__option {
@@ -805,10 +811,8 @@
     }
 
     .site-pricing__tagline {
-        font-family: var(--secondary-font);
         font-size: 1.2rem;
         margin-bottom: 0.5rem;
-        color: var(--secondary-accent);
     }
 
     .site-pricing__option {
